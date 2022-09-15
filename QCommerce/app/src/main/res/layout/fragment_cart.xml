@@ -333,28 +333,35 @@
                     </RelativeLayout>
                 </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/txt_proceedToDelivery"
+                <RelativeLayout
+                    android:id="@+id/rel_proceedToDelivery"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/proceed_to_delivery"
-                    android:textSize="14sp"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginEnd="15dp"
-                    android:padding="10dp"
-                    android:layout_marginTop="15dp"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:layout_below="@+id/rel_cartItem"
-                    android:background="@drawable/border_radius"
-                    android:backgroundTint="@color/pink"/>
+                    android:layout_below="@+id/rel_cartItem">
+
+                    <TextView
+                        android:id="@+id/txt_proceedToDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/my_home_button"
+                        android:gravity="center"
+                        android:padding="15dp"
+                        android:text="@string/proceed_to_delivery"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
 
 
                 <RelativeLayout
                     android:id="@+id/rel_savedForLater"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/txt_proceedToDelivery"
+                    android:layout_below="@id/rel_proceedToDelivery"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
                     android:background="@color/white">
