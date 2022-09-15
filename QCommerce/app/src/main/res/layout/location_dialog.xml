@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_close_24"
+            android:padding="5dp"
+            android:layout_alignParentEnd="true"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@id/img_close">
+        <TextView
+            android:id="@+id/txt_chooseLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/choose_your_location"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_semibold"
+            app:fontFamily="@font/poppins_semibold"/>
+
+        <TextView
+            android:id="@+id/txt_chooseLocationDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_a_delivery_location_to_see_product_availability_and_delivery_option"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_below="@id/txt_chooseLocation"
+            android:fontFamily="@font/poppins_medium"
+            app:fontFamily="@font/poppins_medium"/>
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/rv_location"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10dp"
+             android:layout_below="@id/txt_chooseLocationDescription"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_location_on_24"
+                android:layout_below="@id/rv_location"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"/>
+
+
+            <TextView
+                android:id="@+id/txt_addLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rv_location"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="36dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="@string/add_address_or_pick_up_point"
+                android:textColor="@color/faint_pink"
+                android:textSize="14sp"
+                app:fontFamily="@font/poppins_medium" />
+
+
+        </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

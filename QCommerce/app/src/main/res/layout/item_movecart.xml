@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_cartItem"
+        android:backgroundTint="@color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/laym"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_photo"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:layout_marginTop="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lay"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_productname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="ProductName"
+                            android:layout_weight="0.2"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins"
+                            app:fontFamily="@font/poppins"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_itemdescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lay"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:paddingRight="30dp"
+                        android:textColor="@color/grey"
+                        android:textSize="10sp"
+                        app:fontFamily="@font/poppins_semibold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_below="@id/txt_itemdescription">
+
+                        <TextView
+                            android:id="@+id/txt_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="120$"
+                            android:layout_weight="0.7"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/faint_black"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/poppins_semibold"
+                            app:fontFamily="@font/poppins_semibold"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:layout_gravity="center_vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/img_plus"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_weight="0.1"
+                                    android:paddingEnd="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_baseline_add_box_24"/>
+
+                                <TextView
+                                    android:id="@+id/txt_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.2"
+                                    android:padding="8dp"
+                                    android:text=""
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/poppins_semibold"
+                                    app:fontFamily="@font/poppins_semibold"
+                                    android:background="@drawable/card_radius"/>
+
+                                <ImageView
+                                    android:id="@+id/img_minus"
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:layout_weight="0.1"
+                                    android:paddingStart="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:src="@drawable/ic_baseline_indeterminate_check_box_24"/>
+
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/rel_saveOrDeleteLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/laym"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/faint_grey"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_saveForLaterBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.5"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="@string/move_to_cart"
+                        android:textColor="@color/faint_black"
+                        android:textSize="14sp"
+                        app:fontFamily="@font/poppins" />
+
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:background="@color/faint_grey" />
+
+                    <TextView
+                        android:id="@+id/txt_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delete"
+                        android:textSize="14sp"
+                        android:layout_weight="0.5"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textColor="@color/faint_black"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/card_cartItem"
+        android:layout_marginTop="10dp"
+        android:background="@color/faint_grey" />
+</RelativeLayout>

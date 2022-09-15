@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/border_not_select.xml" value="0.1" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/border_radius.xml" value="0.1" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/border_select.xml" value="0.1" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/border_select_faint.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/border_white.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/button_background.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/card_radius.xml" value="0.1" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/card_radius_grey.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/gradient.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/grey_top_rounded_filed.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/home.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_add_box_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_arrow_drop_down_black.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_category_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_indeterminate_check_box_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_note_add_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_search_off_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_delete_icon.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_notification_svgrepo_com.xml" value="0.1" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/ic_photo.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/my_gradient_brandfocus.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/my_gradient_drawable.xml" value="0.18" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/my_gradient_newarival.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/my_gradient_newseason.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/my_gradient_toolbar.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/my_home_cart.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/my_home_drawable.xml" value="0.2115" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/drawable/my_home_skyblue.xml" value="0.12" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/activity_home.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/activity_splash_screen_actvity.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/exit_dialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/fragment_cart.xml" value="0.33" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/fragment_categories.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/fragment_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/item_banner.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/item_brandfocus.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/item_cart.xml" value="0.33" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/item_expolrebycategories.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/item_location.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/item_movecart.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/item_saveforlater.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/item_treandingnearyou.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/SHREE/AndroidStudioProjects/QCommerce/app/src/main/res/layout/location_dialog.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

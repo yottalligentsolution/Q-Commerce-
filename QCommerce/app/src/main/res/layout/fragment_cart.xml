@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.fragments.CartFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/my_gradient_toolbar"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+
+                    <ImageView
+                        android:id="@+id/refresg"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="60dp"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                    <TextView
+                        android:id="@+id/dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="60dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/cart"
+                        android:textColor="@color/background"
+                        android:textSize="21sp"
+                        app:fontFamily="@font/poppins" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_deliveryTo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_toolbar"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_delivery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/delivery"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        app:fontFamily="@font/poppins" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="10dp">
+
+                        <TextView
+                            android:id="@+id/user_Address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/poppins"
+                            android:singleLine="true"
+                            android:text="Pune India 410140 "
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            app:fontFamily="@font/poppins" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:layout_toRightOf="@id/user_Address"
+                            android:src="@drawable/ic_baseline_arrow_drop_down_black" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/txt_orderSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rel_deliveryTo"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/my_home_skyblue"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Rs. 1235 Saved on this order"
+                    android:textSize="14sp"
+                    app:fontFamily="@font/poppins" />
+
+                <RelativeLayout
+                    android:id="@+id/rel_listLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_orderSave"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_cartItem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_cartItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rel_listLayout"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white">
+
+
+                    <TextView
+                        android:id="@+id/txt_billSummary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:text="@string/bill_summary"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:fontFamily="@font/poppins_bold" />
+
+
+                    <LinearLayout
+                        android:id="@+id/rel_itemLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_billSummary"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_item"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/item"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/poppins_medium" />
+
+
+                        <TextView
+                            android:id="@+id/txt_itemPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:text="45"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/poppins_medium" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rel_packagingFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rel_itemLayout"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_itemPackaging"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/packaging_fee"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/poppins_medium" />
+
+                        <TextView
+                            android:id="@+id/txt_itemPackagingPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="45"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/poppins_medium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rel_deliveryFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rel_packagingFee"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txt_deliveryFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/delivery_fee"
+                            android:textColor="@color/green"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/poppins_medium" />
+
+                        <TextView
+                            android:id="@+id/txt_deliveryFeePrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="0.5"
+                            android:fontFamily="@font/poppins_medium"
+                            android:gravity="end"
+                            android:text="9"
+                            android:textColor="@color/green"
+                            android:textSize="16sp"
+                            app:fontFamily="@font/poppins_medium" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_totalLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rel_deliveryFee">
+
+                        <TextView
+                            android:id="@+id/view_one"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/lin_totalLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/view_one"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_total"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="0.5"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:text="@string/total"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                app:fontFamily="@font/poppins_semibold" />
+
+                            <TextView
+                                android:id="@+id/txt_totalPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="0.5"
+                                android:fontFamily="@font/poppins_semibold"
+                                android:gravity="end"
+                                android:textColor="@color/black"
+                                android:textSize="16sp"
+                                android:text="99"
+                                app:fontFamily="@font/poppins_semibold" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_proceedToDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/proceed_to_delivery"
+                    android:textSize="14sp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/rel_cartItem"
+                    android:background="@drawable/border_radius"
+                    android:backgroundTint="@color/pink"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel_savedForLater"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_proceedToDelivery"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txt_savedForLater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/saved_for_later"
+                        android:textColor="@color/faint_black"
+                        android:textSize="15sp"
+                        app:fontFamily="@font/poppins_medium" />
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_saveForLater"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txt_savedForLater"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rel_trendingNearYou"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rel_savedForLater"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/my_home_cart">
+
+                    <TextView
+                        android:id="@+id/txt_tradingNearYou"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/trending_near_you"
+                        android:textColor="@color/faint_black"
+                        android:textSize="15sp"
+                        app:fontFamily="@font/poppins_medium" />
+
+                    <TextView
+                        android:id="@+id/txt_sellAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="@string/see_all"
+                        android:textColor="@color/offer_pink"
+                        android:textSize="15sp"
+                        app:fontFamily="@font/poppins_medium" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_trendingNearYou"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="36dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>

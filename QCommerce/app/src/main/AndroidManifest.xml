@@ -14,10 +14,11 @@
         android:theme="@style/Theme.QCommerce"
         tools:targetApi="31">
         <activity
-            android:name=".activity.ScrollingActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.QCommerce.NoActionBar">
+            android:name=".activity.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.SplashScreenActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

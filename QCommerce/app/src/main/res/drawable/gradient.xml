@@ -1,0 +1,36 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="437dp"
+    android:height="302dp"
+    android:viewportWidth="437"
+    android:viewportHeight="302">
+
+
+        <group
+            android:translateX="3.236"
+            android:translateY="-1.501"
+            android:pivotX="218.5"
+            android:pivotY="151"
+            android:scaleX="12.43"
+            android:scaleY="8.019"
+            android:rotation="80.795">
+
+
+                    <gradient
+                        android:type="linear"
+                        android:startX="109.5"
+                        android:startY="151"
+                        android:endX="327.5"
+                        android:endY="151">
+
+                        <item
+                            android:color="#69118C"
+                            android:offset="0" />
+
+                        <item
+                            android:color="#F26B6b"
+                            android:offset="1" />
+                    </gradient>
+        </group>
+</vector>
