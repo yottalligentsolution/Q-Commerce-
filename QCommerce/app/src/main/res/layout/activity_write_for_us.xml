@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.WriteForUsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/my_gradient_toolbar"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+
+                    <ImageView
+                        android:id="@+id/refresg"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="60dp"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                    <TextView
+                        android:id="@+id/dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="60dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/write_for_us"
+                        android:textColor="@color/background"
+                        android:textSize="21sp"
+                        app:fontFamily="@font/poppins" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_toolbar"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <EditText
+                        android:id="@+id/edit_suggestion"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:padding="10dp"
+                        android:textSize="14sp"
+                        android:hint="@string/suggestion"
+                        android:gravity="top"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins_medium"
+                        app:fontFamily="@font/poppins_medium"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/edit_suggestion"
+                        android:layout_marginTop="15dp"
+                        android:text="@string/submit"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/my_gradient_brandfocus"
+                        android:fontFamily="@font/poppins_medium"
+                        app:fontFamily="@font/poppins_medium"/>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

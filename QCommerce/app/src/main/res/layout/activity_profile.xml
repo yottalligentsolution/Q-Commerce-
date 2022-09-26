@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:id="@+id/layout_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/my_gradient_toolbar"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+
+                    <ImageView
+                        android:id="@+id/refresg"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="60dp"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                    <TextView
+                        android:id="@+id/dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="60dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/profile"
+                        android:textColor="@color/background"
+                        android:textSize="21sp"
+                        app:fontFamily="@font/poppins" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_below="@id/layout_toolbar">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/profile"
+                        app:civ_border_width="2dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_centerHorizontal="true"
+                        app:civ_border_color="@color/faint_grey"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/profile_image"
+                        android:layout_marginTop="15dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textfield_userName"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginEnd="15dp"
+                            android:hint="@string/enter_name">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textfield_userLastName"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:hint="@string/last_name"
+                            android:layout_below="@id/textfield_userName">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_lastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textfield_userMobileNumber"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:hint="@string/mobile_number"
+                            android:layout_below="@id/textfield_userLastName">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_lastMobileNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textfield_userEmail"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:hint="@string/email"
+                            android:layout_below="@id/textfield_userMobileNumber">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edit_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                        <TextView
+                            android:id="@+id/txt_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginEnd="15dp"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:text="@string/update"
+                            android:layout_below="@id/textfield_userEmail"
+                            android:background="@drawable/my_gradient_brandfocus"
+                            android:fontFamily="@font/poppins_medium"
+                            app:fontFamily="@font/poppins_medium"/>
+
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

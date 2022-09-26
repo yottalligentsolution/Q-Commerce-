@@ -25,13 +25,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_alignParentBottom="true"
-                android:elevation="15dp"
-                android:paddingTop="10dp"
+                android:background="@color/backgroundlightgrey"
+                android:elevation="5dp"
+                android:paddingTop="5dp"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/black"
                 app:tabMaxWidth="0dp"
                 app:tabMode="fixed"
                 app:tabSelectedTextColor="@color/pink"
                 app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-                app:tabTextColor="@color/black" />
+                app:tabTextColor="@color/grey" />
+
         </RelativeLayout>
 
     </LinearLayout>

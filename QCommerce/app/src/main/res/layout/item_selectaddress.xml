@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp">
+
+            <TextView
+                android:id="@+id/txt_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                app:fontFamily="@font/poppins_semibold" />
+
+            <TextView
+                android:id="@+id/txt_userAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/txt_userName"
+                android:fontFamily="@font/poppins"
+                app:fontFamily="@font/poppins"/>
+
+            <TextView
+                android:id="@+id/txt_userPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:layout_below="@id/txt_userAddress"
+                android:fontFamily="@font/poppins"
+                app:fontFamily="@font/poppins"/>
+
+
+            <TextView
+                android:id="@+id/txt_deliverToAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_userPhone"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/my_home_radius"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/deliver_to_this_address"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                app:fontFamily="@font/poppins" />
+
+
+            <TextView
+                android:id="@+id/txt_editAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="@string/edit_address"
+                android:layout_below="@id/txt_deliverToAddress"
+                android:fontFamily="@font/poppins"
+                app:fontFamily="@font/poppins"
+                android:background="@drawable/card_radius_grey"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

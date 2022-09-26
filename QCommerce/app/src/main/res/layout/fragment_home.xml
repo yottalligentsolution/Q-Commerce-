@@ -25,46 +25,14 @@
                     android:layout_height="wrap_content">
 
                     <View
+                        android:id="@+id/view"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="120dp"
                         android:background="@drawable/my_gradient_drawable" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-
-                        <RelativeLayout
-                            android:id="@+id/rel_searchLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginEnd="10dp"
-                            android:visibility="gone">
-
-                            <EditText
-                                android:id="@+id/edit_Search"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/border_white"
-                                android:fontFamily="@font/poppins_medium"
-                                android:hint="@string/enter_product_categories"
-                                android:padding="10dp"
-                                android:singleLine="true"
-                                android:textColor="@color/black"
-                                android:textSize="14sp"
-                                app:fontFamily="@font/poppins_medium" />
-
-                            <ImageView
-                                android:id="@+id/img_searchCancel"
-                                android:layout_width="30sp"
-                                android:layout_height="30sp"
-                                android:layout_alignParentEnd="true"
-                                android:layout_centerVertical="true"
-                                android:layout_marginEnd="10dp"
-                                android:src="@drawable/ic_baseline_search_off_24" />
-
-                        </RelativeLayout>
 
                         <LinearLayout
                             android:id="@+id/lin_locationSearchNotificationLayout"
@@ -121,78 +89,56 @@
                                 android:gravity="end">
 
                                 <ImageView
-                                    android:id="@+id/img_search"
-                                    android:layout_width="30sp"
-                                    android:layout_height="30sp"
-                                    android:layout_centerVertical="true"
-                                    android:src="@drawable/ic_baseline_search_24" />
-
-                                <ImageView
                                     android:id="@+id/img_notification"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:layout_centerVertical="true"
                                     android:layout_marginStart="15dp"
-                                    android:layout_toRightOf="@id/img_search"
                                     android:src="@drawable/ic_notification_svgrepo_com" />
 
                             </RelativeLayout>
-
-
                         </LinearLayout>
-                    </RelativeLayout>
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/rv_banner"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginTop="66dp"
-                        android:layout_marginEnd="15sp" />
-
-                    <RelativeLayout
-                        android:id="@+id/rel_trendingNearYou"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/rv_banner"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp">
-
-                        <TextView
-                            android:id="@+id/txt_tradingNearYou"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/trending_near_you"
-                            android:textColor="@color/faint_black"
-                            android:textSize="15sp"
-                            app:fontFamily="@font/poppins_medium" />
-
-                        <TextView
-                            android:id="@+id/txt_sellAll"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="@string/see_all"
-                            android:textColor="@color/offer_pink"
-                            android:textSize="15sp"
-                            app:fontFamily="@font/poppins_medium" />
-
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/rv_trendingNearYou"
+                        <RelativeLayout
+                            android:id="@+id/rel_searchLayout"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="30dp" />
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:visibility="visible"
+                            android:layout_below="@id/lin_locationSearchNotificationLayout">
 
+                            <EditText
+                                android:id="@+id/edit_Search"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_white"
+                                android:fontFamily="@font/poppins_medium"
+                                android:hint="@string/enter_product_categories"
+                                android:padding="10dp"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                app:fontFamily="@font/poppins_medium" />
+
+                            <ImageView
+                                android:id="@+id/img_searchCancel"
+                                android:layout_width="30sp"
+                                android:layout_height="30sp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/ic_baseline_search_24" />
+
+                        </RelativeLayout>
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:id="@+id/rel_exploreByCategories"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/rel_trendingNearYou"
+                        android:layout_below="@id/view"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="15dp"
                         android:layout_marginEnd="15dp">
@@ -226,11 +172,82 @@
 
                     </RelativeLayout>
 
+
+
+                    <RelativeLayout
+                        android:id="@+id/lay_viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rel_exploreByCategories">
+
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:clipChildren="false" />
+
+                        <com.viewpagerindicator.CirclePageIndicator
+                            android:id="@+id/indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBottom="@id/pager"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="bottom"
+                            android:padding="10dip"
+                            app:centered="true"
+                            app:fillColor="@color/white"
+                            app:pageColor="@color/light_grey"
+                            app:snap="false" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel_trendingNearYou"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lay_viewPager"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="15dp">
+
+                        <TextView
+                            android:id="@+id/txt_tradingNearYou"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/trending_near_you"
+                            android:textColor="@color/faint_black"
+                            android:textSize="15sp"
+                            app:fontFamily="@font/poppins_medium" />
+
+                        <TextView
+                            android:id="@+id/txt_sellAll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/see_all"
+                            android:textColor="@color/offer_pink"
+                            android:textSize="15sp"
+                            app:fontFamily="@font/poppins_medium" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_trendingNearYou"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp" />
+
+                    </RelativeLayout>
+
+
                     <RelativeLayout
                         android:id="@+id/rel_newArrival"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@id/rel_exploreByCategories"
+                        android:layout_below="@id/rel_trendingNearYou"
                         android:layout_marginTop="15dp"
                         android:background="@drawable/my_gradient_newarival">
 
@@ -406,52 +423,52 @@
 
                     </RelativeLayout>
 
-                <RelativeLayout
-                    android:id="@+id/rel_suggestProduct"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/rel_brandFocus"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="15dp">
-
-                    <TextView
-                        android:id="@+id/txt_dontFind"
-                        android:layout_width="160dp"
+                    <RelativeLayout
+                        android:id="@+id/rel_suggestProduct"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="@string/din_t_find_what_you_were_looking_for"
-                        android:textColor="@color/faint_grey"
-                        android:textSize="21sp"
-                        app:fontFamily="@font/poppins_medium" />
+                        android:layout_below="@id/rel_brandFocus"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp">
 
-                    <TextView
-                        android:id="@+id/txt_suggest"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="@string/suggest_something_we_will_look_into_it"
-                        android:textColor="@color/faint_grey"
-                        android:textSize="12sp"
-                        android:layout_marginTop="15dp"
-                        android:layout_below="@+id/txt_dontFind"
-                        app:fontFamily="@font/poppins_medium" />
+                        <TextView
+                            android:id="@+id/txt_dontFind"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/din_t_find_what_you_were_looking_for"
+                            android:textColor="@color/faint_grey"
+                            android:textSize="21sp"
+                            app:fontFamily="@font/poppins_medium" />
 
-                    <TextView
-                        android:id="@+id/txt_suggestAProduct"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="@string/suggest_a_product"
-                        android:textColor="@color/offer_pink"
-                        android:textSize="15sp"
-                        android:layout_marginTop="15dp"
-                        android:padding="10dp"
-                        android:layout_below="@+id/txt_suggest"
-                        app:fontFamily="@font/poppins_medium"
-                        android:background="@drawable/card_radius_grey"/>
+                        <TextView
+                            android:id="@+id/txt_suggest"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/suggest_something_we_will_look_into_it"
+                            android:textColor="@color/faint_grey"
+                            android:textSize="12sp"
+                            android:layout_marginTop="15dp"
+                            android:layout_below="@+id/txt_dontFind"
+                            app:fontFamily="@font/poppins_medium" />
+
+                        <TextView
+                            android:id="@+id/txt_suggestAProduct"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="@string/suggest_a_product"
+                            android:textColor="@color/offer_pink"
+                            android:textSize="15sp"
+                            android:layout_marginTop="15dp"
+                            android:padding="10dp"
+                            android:layout_below="@+id/txt_suggest"
+                            app:fontFamily="@font/poppins_medium"
+                            android:background="@drawable/card_radius_grey"/>
 
 
-                </RelativeLayout>
+                    </RelativeLayout>
                 </RelativeLayout>
             </RelativeLayout>
         </androidx.core.widget.NestedScrollView>

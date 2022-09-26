@@ -16,5 +16,7 @@
     <color name="backgroundoff">#FAFAFC</color>
     <color name="faint_black">#393F42</color>
     <color name="faint_grey">#D0D0D0</color>
+    <color name="background_grey">#DCDCDC</color>
     <color name="green">#15C811</color>
+    <color name="backgroundlightgrey">#f0f1f2</color>
 </resources>

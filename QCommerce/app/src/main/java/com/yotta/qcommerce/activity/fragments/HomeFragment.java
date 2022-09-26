@@ -1,6 +1,7 @@
 package com.yotta.qcommerce.activity.fragments;
 
 import android.app.Dialog;
+import android.content.ClipData;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -10,8 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,10 +31,12 @@ import com.yotta.qcommerce.activity.adapter.LocationAdapter;
 import com.yotta.qcommerce.activity.adapter.NewArrivalsAdapter;
 import com.yotta.qcommerce.activity.adapter.NewSeasonAdapter;
 import com.yotta.qcommerce.activity.adapter.RiceAndShineAdapter;
+import com.yotta.qcommerce.activity.adapter.SlidingImageAdapter;
 import com.yotta.qcommerce.activity.adapter.TrendingNearYouAdapter;
 import com.yotta.qcommerce.activity.model.BannerClass;
 import com.yotta.qcommerce.activity.model.BrandFocusClass;
 import com.yotta.qcommerce.activity.model.ExploreByCategoriesClass;
+import com.yotta.qcommerce.activity.model.Item;
 import com.yotta.qcommerce.activity.model.LocationClass;
 import com.yotta.qcommerce.activity.model.NewArrivalsClass;
 import com.yotta.qcommerce.activity.model.NewSeasonClass;
@@ -42,24 +47,36 @@ import com.yotta.qcommerce.databinding.FragmentHomeBinding;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
 public class HomeFragment extends Fragment implements LocationAdapter.addAddressClick{
 
     private FragmentHomeBinding binding;
     private Dialog dialog;
     RecyclerView rv_Location,rv_trendingNearYou;
     String get_Address = "";
+    private List<String> bannerList = new ArrayList<>();
+    private String[] mStringArray = new String[bannerList.size()];
+    private List<Item> categoryArrayList = new ArrayList<>();
+    private static int currentPage = 0;
+    private static int NUM_PAGES = 0;
+    int[] img;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentHomeBinding.inflate(inflater,container,false);
-        populateData();
+        //populateData();
+        imageSlider();
         trendingNearYou();
         exploreByCategories();
         newArrivals();
         newSeason();
         newRiceAndShine();
         newBrandFocus();
+
 
         binding.userAddress.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,13 +85,13 @@ public class HomeFragment extends Fragment implements LocationAdapter.addAddress
             }
         });
 
-        binding.imgSearch.setOnClickListener(new View.OnClickListener() {
+       /* binding.imgSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 binding.linLocationSearchNotificationLayout.setVisibility(View.GONE);
                 binding.relSearchLayout.setVisibility(View.VISIBLE);
             }
-        });
+        });*/
 
         binding.imgSearchCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +104,7 @@ public class HomeFragment extends Fragment implements LocationAdapter.addAddress
         return binding.getRoot();
     }
 
-    private void populateData() {
+    /*private void populateData() {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false);
         binding.rvBanner.setLayoutManager(layoutManager);
         List<BannerClass> list = new ArrayList<>();
@@ -115,7 +132,56 @@ public class HomeFragment extends Fragment implements LocationAdapter.addAddress
 
         handler.postDelayed(runnable,speedScroll);
 
+    }*/
+
+
+    private void imageSlider()
+    {
+        img = new int[]{R.drawable.demolaptop3, R.drawable.demolaptop2,
+                R.drawable.demolaptop1, R.drawable.demoriceoil,
+        };      //select the image from res/drawable  folder
+
+        binding.pager.setAdapter(new SlidingImageAdapter(img,getActivity()));
+        binding.pager.setOffscreenPageLimit(mStringArray.length);
+        binding.indicator.setViewPager(binding.pager);
+
+        final float density = getResources().getDisplayMetrics().density;
+        NUM_PAGES = mStringArray.length;
+
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == NUM_PAGES) {
+                    currentPage = 0;
+                }
+                binding.pager.setCurrentItem(currentPage++, true);
+            }
+        };
     }
+
+
+
+    private void sliderImg() {
+        /*binding.pager.setAdapter(new SlidingImageAdapter(getActivity(), categoryArrayList));
+        binding.pager.setOffscreenPageLimit(mStringArray.length);
+        binding.dotsIndicator.attachTo(binding.pager);
+
+        final float density = getResources().getDisplayMetrics().density;
+        NUM_PAGES = mStringArray.length;*/
+
+        /*// Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == NUM_PAGES) {
+                    currentPage = 0;
+                }
+                binding.pager.setCurrentItem(currentPage++, true);
+            }
+        };*/
+    }
+
+
 
     private void trendingNearYou() {
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false);

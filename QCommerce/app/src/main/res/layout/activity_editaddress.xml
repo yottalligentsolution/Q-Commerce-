@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activity.SelectLocationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/my_gradient_toolbar"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+
+                    <ImageView
+                        android:id="@+id/refresg"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="60dp"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                    <TextView
+                        android:id="@+id/dashboard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="60dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="@string/edit_address"
+                        android:textColor="@color/background"
+                        android:textSize="21sp"
+                        app:fontFamily="@font/poppins" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_toolbar"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="10dp"
+                    android:background="@color/white">
+
+
+                    <TextView
+                        android:id="@+id/txt_userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/full_name"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"/>
+
+                    <EditText
+                        android:id="@+id/edit_userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_userName"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_userMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mobile_number"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/edit_userName"/>
+
+                    <EditText
+                        android:id="@+id/edit_userMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_userMobile"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:inputType="number"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+                    <TextView
+                        android:id="@+id/txt_userPinCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pin_code"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/edit_userMobile"/>
+
+                    <EditText
+                        android:id="@+id/edit_userPinCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_userPinCode"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:inputType="number"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_userFlatNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/flat_house_no_building_apartment_company"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/edit_userPinCode"/>
+
+                    <EditText
+                        android:id="@+id/edit_userFlatN0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_userFlatNo"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_userArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/area_street_village"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/edit_userFlatN0"/>
+
+                    <EditText
+                        android:id="@+id/edit_userArea"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_userArea"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_userLandMark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/land_mark"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/edit_userArea"/>
+
+                    <EditText
+                        android:id="@+id/edit_userLandMark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_userLandMark"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_userCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/city_town"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/edit_userLandMark"/>
+
+                    <EditText
+                        android:id="@+id/edit_userCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt_userCity"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_userCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/country"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/edit_userCity"/>
+
+                    <Spinner
+                        android:id="@+id/spin_Country"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/txt_userCountry"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_userState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/state"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/spin_Country"/>
+
+                    <Spinner
+                        android:id="@+id/spin_State"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/txt_userState"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_userAddressType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/address_type"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/spin_State"/>
+
+                    <Spinner
+                        android:id="@+id/spin_addressType"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_below="@id/txt_userAddressType"
+                        android:padding="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/card_radius_grey"
+                        android:fontFamily="@font/poppins"
+                        app:fontFamily="@font/poppins"/>
+
+                    <TextView
+                        android:id="@+id/txt_useThisAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/use_this_address"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:padding="15dp"
+                        android:gravity="center"
+                        android:background="@drawable/my_home_button"
+                        android:fontFamily="@font/poppins_semibold"
+                        app:fontFamily="@font/poppins_semibold"
+                        android:layout_below="@+id/spin_addressType"/>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>

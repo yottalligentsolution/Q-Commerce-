@@ -35,9 +35,9 @@ public class HomeActivity extends AppCompatActivity {
     ActivityHomeBinding binding;
     Dialog dialog;
 
-    private int[] tabIcon = {
+    private int[]  tabIcon = {
             R.drawable.ic_baseline_home_24,
-            R.drawable.ic_baseline_category_24,
+            R.drawable.category,
             R.drawable.ic_baseline_shopping_cart_24,
             R.drawable.ic_baseline_person_24
     };
@@ -68,7 +68,7 @@ public class HomeActivity extends AppCompatActivity {
                     @Override
                     public void onTabUnselected(TabLayout.Tab tab) {
                         //tab.view.setBackground(null);
-                        int tabIconColor = ContextCompat.getColor(HomeActivity.this, R.color.black);
+                        int tabIconColor = ContextCompat.getColor(HomeActivity.this, R.color.grey);
                         tab.getIcon().setColorFilter(tabIconColor, PorterDuff.Mode.SRC_IN);
                     }
 
